@@ -18,26 +18,33 @@ public class Programa {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+        boolean jugar = true; 
+    
        System.out.println("VAMOS A JUGAR");
        Scanner scan =new Scanner(System.in);
-       boolean jugar = false;
-       int adivinar;
-       while(jugar==true ){
+      
+      
+       while(jugar){
        
-       adivinar= 1+ (int)(100.0 * Math.random());
+    	   
+    	   int adivinar= 1+ (int)(10.0 * Math.random());
+    	   System.out.println(adivinar);
        System.out.print("Dime un numero del 1 al 10: ");
        int num =(int) scan.nextFloat();
-       if(num != adivinar)
+       if(num == adivinar) {
            System.out.println("¡Acertaste! :D");
-       if(num<=0)
-           System.out.println("Adios...");
-       else
-               System.out.println("¡No! Era el " +adivinar);
-        
+           
+       }
+           
        
+       else {
+               System.out.println("¡No! Era el " +adivinar);
+       }
+       if(num<=0) {
+           System.out.println("Adios...");
+           System.exit(0);
         
     }
-    
+       }
 }
 }
