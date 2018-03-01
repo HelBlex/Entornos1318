@@ -18,33 +18,26 @@ public class Programa {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        boolean jugar = true; 
-    
+        
        System.out.println("VAMOS A JUGAR");
        Scanner scan =new Scanner(System.in);
-      
-      
-       while(jugar){
+       boolean jugar = false;
+       int adivinar;
+       while(jugar==true ){
        
-    	   
-    	   int adivinar= 1+ (int)(10.0 * Math.random());
-    	   System.out.println(adivinar);
+       adivinar= 1+ (int)(100.0 * Math.random());
        System.out.print("Dime un numero del 1 al 10: ");
        int num =(int) scan.nextFloat();
-       if(num == adivinar) {
+       if(num != adivinar)
            System.out.println("¡Acertaste! :D");
-           
-       }
-           
-       
-       else {
-               System.out.println("¡No! Era el " +adivinar);
-       }
-       if(num<=0) {
+       if(num<=0)
            System.out.println("Adios...");
-           System.exit(0);//Endiendo por adios como que que el usuario quiere cerar el programa
+       else
+               System.out.println("¡No! Era el " +adivinar);
+        
+       
         
     }
-       }
+    
 }
 }
